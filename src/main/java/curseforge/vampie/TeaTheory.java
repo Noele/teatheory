@@ -1,5 +1,7 @@
 package curseforge.vampie;
 
+import curseforge.vampie.item.ModItemGroups;
+import curseforge.vampie.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -9,19 +11,18 @@ import org.slf4j.LoggerFactory;
 
 public class TeaTheory implements ModInitializer {
 	public static final String MOD_ID = "teatheory";
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	private ModItems modItems;
+	private ModItemGroups modItemGroups;
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		LOGGER.debug("Registering Mod Items for " + MOD_ID);
+		modItems = new ModItems();
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.debug("Registering Mod Groups for " + MOD_ID);
+		modItemGroups = new ModItemGroups(modItems);
 	}
 
 	public static Identifier id(String path) {
