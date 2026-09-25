@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "teatheory",
+	"version": "${version}",
+	"name": "Tea Theory",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/teatheory/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"curseforge.vampie.TeaTheory"
+		],
+		"client": [
+			"curseforge.vampie.client.TeaTheoryClient"
+		],
+		"fabric-datagen": [
+			"curseforge.vampie.client.TeaTheoryDataGenerator"
+		]
+	},
+	"mixins": [
+		"teatheory.mixins.json",
+		{
+			"config": "teatheory.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
