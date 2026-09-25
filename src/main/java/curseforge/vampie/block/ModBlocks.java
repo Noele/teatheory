@@ -19,7 +19,7 @@ public class ModBlocks
                             BuiltInRegistries.BLOCK.key(),
                             TeaTheory.id("tea_brick")
                     )
-            ).sound(SoundType.GRASS)
+            ).sound(SoundType.GRASS).strength(0.5f)
             ));
 
     private Block registerBlock(String name, Block block) {
