@@ -16,11 +16,13 @@ public class ModItems {
             ))));
 
     public final Item[] ALL_ITEMS;
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(
                 BuiltInRegistries.ITEM,
                 Identifier.fromNamespaceAndPath(TeaTheory.MOD_ID, name), item);
     }
+
     public ModItems() {
         ALL_ITEMS = new Item[]{CAMELLIA_SINENSIS};
     }

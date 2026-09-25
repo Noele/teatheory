@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+      "teatheory:tea_brick"
+  ],
+  "result": {
+    "id": "teatheory:camellia_sinensis",
+    "count": 9
+  }
+}

@@ -2,6 +2,7 @@ package curseforge.vampie.item;
 
 import curseforge.vampie.TeaTheory;
 
+import curseforge.vampie.block.ModBlocks;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,6 +12,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class ModItemGroups {
 
     public final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
@@ -18,12 +22,12 @@ public class ModItemGroups {
     );
     public final CreativeModeTab CUSTOM_CREATIVE_TAB;
 
-    public ModItemGroups(ModItems modItems) {
+    public ModItemGroups(ModItems modItems, ModBlocks modBlocks) {
         CUSTOM_CREATIVE_TAB = FabricCreativeModeTab.builder()
                 .icon(() -> new ItemStack(modItems.CAMELLIA_SINENSIS))
                 .title(Component.translatable(TeaTheory.MOD_ID + ".creativetab.items"))
                 .displayItems((params, output) -> {
-                    for(Item item : modItems.ALL_ITEMS) {
+                    for(Item item : Stream.concat(Arrays.stream(modItems.ALL_ITEMS), Arrays.stream(modBlocks.ALL_BLOCKS_AS_ITEMS)).toList()) {
                         output.accept(item);
                     }
                 })
