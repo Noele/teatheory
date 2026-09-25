@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "teatheory:camellia_sinensis",
+    "teatheory:camellia_sinensis",
+    "teatheory:camellia_sinensis",
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    },
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "teatheory:fukamushicha_sencha_tea",
+    "count": 1
+  }
+}
