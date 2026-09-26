@@ -21,6 +21,12 @@ public class ModItems {
                     TeaTheory.id("fukamushicha_sencha_tea")
             )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
 
+    public static final Item FUKAMUSHICHA_SENCHA_TEA_LEAVES = registerItem("fukamushicha_sencha_tea_leaves", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("fukamushicha_sencha_tea_leaves")
+            ))));
+
     public final Item[] ALL_ITEMS;
 
     private static Item registerItem(String name, Item item) {
@@ -30,6 +36,6 @@ public class ModItems {
     }
 
     public ModItems() {
-        ALL_ITEMS = new Item[]{CAMELLIA_SINENSIS, FUKAMUSHICHA_SENCHA_TEA};
+        ALL_ITEMS = new Item[]{CAMELLIA_SINENSIS, FUKAMUSHICHA_SENCHA_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA};
     }
 }

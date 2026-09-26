@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "show_notification": true,
+  "category": "misc",
+  "ingredient": "teatheory:camellia_sinensis",
+  "result": "teatheory:fukamushicha_sencha_tea_leaves",
+  "cookingtime": 100
+}

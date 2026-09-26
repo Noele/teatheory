@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "teatheory:camellia_sinensis",
-    "teatheory:camellia_sinensis",
-    "teatheory:camellia_sinensis",
+    "teatheory:fukamushicha_sencha_tea_leaves",
     {
       "fabric:type": "fabric:components",
       "base": "minecraft:potion",
