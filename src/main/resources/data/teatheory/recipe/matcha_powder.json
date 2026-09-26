@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "category": "misc",
+  "ingredient": "teatheory:camellia_sinensis",
+  "result": {
+    "id": "teatheory:matcha_powder",
+    "count": 1
+  }
+}
