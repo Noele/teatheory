@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:blasting",
+  "show_notification": true,
+  "category": "misc",
+  "ingredient": "teatheory:sencha_tea_leaves",
+  "result": "teatheory:hojicha_tea_leaves",
+  "cookingtime": 100
+}

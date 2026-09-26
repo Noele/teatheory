@@ -23,5 +23,10 @@ public final class ModRecipes {
                 }
         );
         Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, TeaTheory.id("boiler"), BoilerRecipe.SERIALIZER);
+        Registry.register(
+                BuiltInRegistries.RECIPE_SERIALIZER,
+                TeaTheory.id("reusable_tool_crafting"),
+                ReusableToolCraftingRecipe.SERIALIZER
+        );
     }
 }

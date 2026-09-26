@@ -1,15 +1,20 @@
 {
   "teatheory.creativetab.items": "Tea Theory",
 
+  "item.teatheory.rolling_pin": "Rolling Pin",
+
+
   "item.teatheory.camellia_sinensis": "Camellia Sinensis",
 
   "item.teatheory.fukamushicha_sencha_tea": "Fukamushicha Sencha Tea",
   "item.teatheory.sencha_tea": "Sencha Tea",
   "item.teatheory.matcha_tea": "Matcha Tea",
+  "item.teatheory.hojicha_tea": "Hōjicha Tea",
 
   "item.teatheory.fukamushicha_sencha_tea_leaves": "Fukamushicha Sencha Tea Leaves",
   "item.teatheory.sencha_tea_leaves": "Sencha Tea Leaves",
   "item.teatheory.matcha_powder": "Matcha Powder",
+  "item.teatheory.hojicha_tea_leaves": "Hojicha Tea Leaves",
 
   "item.teatheory.tea_brick": "Tea Brick",
 

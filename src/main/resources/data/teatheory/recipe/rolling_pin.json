@@ -1,0 +1,12 @@
+{
+  "type": "teatheory:reusable_tool_crafting",
+  "category": "misc",
+  "ingredients": [
+    "teatheory:rolling_pin",
+    "minecraft:stone"
+  ],
+  "result": {
+    "id": "minecraft:cobblestone",
+    "count": 1
+  }
+}
