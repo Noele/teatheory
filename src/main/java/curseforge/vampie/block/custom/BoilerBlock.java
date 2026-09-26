@@ -52,7 +52,7 @@ public class BoilerBlock extends FurnaceBlock {
             double y = (double)pos.getY();
             double z = (double)pos.getZ() + (double)0.5F;
             if (random.nextDouble() < 0.1) {
-                level.playLocalSound(x, y, z, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound(x, y, z, SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_AMBIENT, SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
 
             Direction direction = (Direction)state.getValue(FACING);
