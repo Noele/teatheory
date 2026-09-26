@@ -59,7 +59,7 @@ public class BoilerBlock extends FurnaceBlock {
             double r = 0.52;
             double ss = random.nextDouble() * 0.6 - 0.3;
             double dx = axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52 : ss;
-            double dy = random.nextDouble() * (double)6.0F / (double)16.0F;
+            double dy = random.nextDouble() * (double)5.0F / (double)16.0F;
             double dz = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : ss;
             level.addParticle(ParticleTypes.BUBBLE, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
             level.addParticle(ParticleTypes.BUBBLE_POP, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
