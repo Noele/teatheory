@@ -11,6 +11,7 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 public class ModFoodComponents {
     public static final FoodProperties FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES = new FoodProperties.Builder()
             .nutrition(6)
+            .alwaysEdible()
             .saturationModifier(5)
             .build();
 

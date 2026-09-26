@@ -31,6 +31,9 @@ public class CamelliaSinensisBushBlock extends SweetBerryBushBlock {
             if (level instanceof ServerLevel) {
                 ServerLevel serverLevel = (ServerLevel) level;
                 Block.popResource(serverLevel, pos, new ItemStack(ModItems.CAMELLIA_SINENSIS));
+                if (serverLevel.getRandom().nextFloat() < 0.01F) {
+                    Block.popResource(serverLevel, pos, new ItemStack(ModItems.LEAF_BUD));
+                }
                 serverLevel.playSound((Entity) null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + serverLevel.getRandom().nextFloat() * 0.4F);
                 BlockState newState = (BlockState) state.setValue(AGE, 1);
                 serverLevel.setBlock(pos, newState, 2);
