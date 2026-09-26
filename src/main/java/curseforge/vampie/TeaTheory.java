@@ -3,6 +3,7 @@ package curseforge.vampie;
 import curseforge.vampie.block.ModBlocks;
 import curseforge.vampie.block.entity.ModBlockEntities;
 import curseforge.vampie.item.ModItemGroups;
+import curseforge.vampie.item.ModDataComponents;
 import curseforge.vampie.item.ModItems;
 import curseforge.vampie.recipe.ModRecipes;
 import curseforge.vampie.world.WorldGen;
@@ -24,6 +25,9 @@ public class TeaTheory implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.debug("Registering Mod Data Components for " + MOD_ID);
+		ModDataComponents.register();
+
 		LOGGER.debug("Registering Mod Items for " + MOD_ID);
 		modItems = new ModItems();
 

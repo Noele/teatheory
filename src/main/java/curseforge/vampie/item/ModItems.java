@@ -1,6 +1,7 @@
 package curseforge.vampie.item;
 
 import curseforge.vampie.TeaTheory;
+import curseforge.vampie.item.custom.ExpiringItem;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -22,11 +23,17 @@ public class ModItems {
                     TeaTheory.id("camellia_sinensis")
             ))));
 
-    public static final Item ROLLED_LEAVES = registerItem("rolled_leaves", new Item(new Item.Properties().setId(
+    public static final Item SENCHA_TEA_LEAVES = registerItem("sencha_tea_leaves", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("sencha_tea_leaves")
+            ))));
+
+    public static final Item ROLLED_LEAVES = registerItem("rolled_leaves", new ExpiringItem(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("rolled_leaves")
-            ))));
+            ))).expiresTo(SENCHA_TEA_LEAVES, 2 * 60 * 20));
 
     public static final Item FUKAMUSHICHA_SENCHA_TEA = registerItem("fukamushicha_sencha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
@@ -69,12 +76,6 @@ public class ModItems {
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("matcha_powder")
-            ))));
-
-    public static final Item SENCHA_TEA_LEAVES = registerItem("sencha_tea_leaves", new Item(new Item.Properties().setId(
-            ResourceKey.create(
-                    BuiltInRegistries.ITEM.key(),
-                    TeaTheory.id("sencha_tea_leaves")
             ))));
 
     public final Item[] ALL_ITEMS;
