@@ -1,12 +1,19 @@
 {
-  "type": "teatheory:reusable_tool_crafting",
-  "category": "misc",
-  "ingredients": [
-    "teatheory:rolling_pin",
-    "minecraft:stone"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  @",
+    " _ ",
+    "@  "
   ],
+  "key": {
+    "_": [
+      "minecraft:stick"
+    ],
+    "@": [
+      "minecraft:oak_plank"
+    ]
+  },
   "result": {
-    "id": "minecraft:cobblestone",
-    "count": 1
+    "id": "teatheory:rolling_pin"
   }
 }

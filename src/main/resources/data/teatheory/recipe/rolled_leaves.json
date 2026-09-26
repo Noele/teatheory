@@ -1,0 +1,12 @@
+{
+  "type": "teatheory:reusable_tool_crafting",
+  "category": "misc",
+  "ingredients": [
+    "teatheory:rolling_pin",
+    "teatheory:camellia_sinensis"
+  ],
+  "result": {
+    "id": "teatheory:rolled_leaves",
+    "count": 1
+  }
+}

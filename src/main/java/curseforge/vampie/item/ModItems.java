@@ -22,6 +22,12 @@ public class ModItems {
                     TeaTheory.id("camellia_sinensis")
             ))));
 
+    public static final Item ROLLED_LEAVES = registerItem("rolled_leaves", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("rolled_leaves")
+            ))));
+
     public static final Item FUKAMUSHICHA_SENCHA_TEA = registerItem("fukamushicha_sencha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
@@ -80,6 +86,6 @@ public class ModItems {
     }
 
     public ModItems() {
-        ALL_ITEMS = new Item[]{ROLLING_PIN, CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, HOJICHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SENCHA_TEA, MATCHA_TEA, HOJICHA_TEA};
+        ALL_ITEMS = new Item[]{ROLLING_PIN, ROLLED_LEAVES, CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, HOJICHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SENCHA_TEA, MATCHA_TEA, HOJICHA_TEA};
     }
 }
