@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teatheory:item/camellia_sinensis_bush"
+  }
+}

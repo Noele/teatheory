@@ -9,13 +9,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 
 public class ModItems {
-    public final Item CAMELLIA_SINENSIS = registerItem("camellia_sinensis", new Item(new Item.Properties().setId(
+    public static final Item CAMELLIA_SINENSIS = registerItem("camellia_sinensis", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("camellia_sinensis")
             ))));
 
-    public final Item FUKAMUSHICHA_SENCHA_TEA = registerItem("fukamushicha_sencha_tea", new Item(new Item.Properties().setId(
+    public static final Item FUKAMUSHICHA_SENCHA_TEA = registerItem("fukamushicha_sencha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("fukamushicha_sencha_tea")

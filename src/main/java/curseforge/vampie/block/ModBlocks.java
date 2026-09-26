@@ -1,6 +1,7 @@
 package curseforge.vampie.block;
 
 import curseforge.vampie.TeaTheory;
+import curseforge.vampie.block.custom.CamelliaSinensisBushBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -22,6 +23,18 @@ public class ModBlocks
             ).sound(SoundType.GRASS).strength(0.5f)
             ));
 
+    public final Block CAMELLIA_SINENSIS_BUSH = registerBlock("camellia_sinensis_bush",
+            new CamelliaSinensisBushBlock(BlockBehaviour.Properties.of().setId(
+                    ResourceKey.create(
+                            BuiltInRegistries.BLOCK.key(),
+                            TeaTheory.id("camellia_sinensis_bush")
+                    )
+            )
+                    .sound(SoundType.SWEET_BERRY_BUSH)
+                    .noCollision()
+                    .noOcclusion()
+            ));
+
     private Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(TeaTheory.MOD_ID, name), block);
@@ -37,6 +50,6 @@ public class ModBlocks
 
     public final Item[] ALL_BLOCKS_AS_ITEMS;
     public ModBlocks() {
-        ALL_BLOCKS_AS_ITEMS = new Item[] {TEA_BRICK.asItem()};
+        ALL_BLOCKS_AS_ITEMS = new Item[] {TEA_BRICK.asItem(), CAMELLIA_SINENSIS_BUSH.asItem()};
     }
 }

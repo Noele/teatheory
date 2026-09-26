@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "teatheory:block/camellia_sinensis_bush_stage2"
+  }
+}

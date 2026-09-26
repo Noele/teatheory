@@ -3,6 +3,7 @@ package curseforge.vampie;
 import curseforge.vampie.block.ModBlocks;
 import curseforge.vampie.item.ModItemGroups;
 import curseforge.vampie.item.ModItems;
+import curseforge.vampie.world.WorldGen;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -17,6 +18,7 @@ public class TeaTheory implements ModInitializer {
 	private ModItems modItems;
 	private ModBlocks modBlocks;
 	private ModItemGroups modItemGroups;
+	private WorldGen worldGen;
 
 	@Override
 	public void onInitialize() {
@@ -28,6 +30,10 @@ public class TeaTheory implements ModInitializer {
 
 		LOGGER.debug("Registering Mod Groups for " + MOD_ID);
 		modItemGroups = new ModItemGroups(modItems, modBlocks);
+
+		LOGGER.debug("Running world generation for " + MOD_ID);
+		worldGen = new WorldGen();
+
 	}
 
 	public static Identifier id(String path) {
