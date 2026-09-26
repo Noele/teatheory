@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "ingredient": "teatheory:leaf_bud",
+  "result": "teatheory:silver_needle_tea_leaves",
+  "cookingtime": 600
+}

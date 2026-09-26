@@ -90,6 +90,13 @@ public class ModItems {
             )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
 
 
+    public static final Item SILVER_NEEDLE_TEA = registerItem("silver_needle_tea", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("silver_needle_tea")
+            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+
+
     public static final Item FUKAMUSHICHA_SENCHA_TEA_LEAVES = registerItem("fukamushicha_sencha_tea_leaves", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
@@ -100,6 +107,17 @@ public class ModItems {
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("hojicha_tea_leaves")
+            ))));
+    public static final Item SILVER_NEEDLE_TEA_LEAVES = registerItem("silver_needle_tea_leaves", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("silver_needle_tea_leaves")
+            ))));
+
+    public static final Item LEAF_BUD = registerItem("leaf_bud", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("leaf_bud")
             ))));
 
     public static final Item MATCHA_POWDER = registerItem("matcha_powder", new Item(new Item.Properties().setId(
@@ -117,6 +135,6 @@ public class ModItems {
     }
 
     public ModItems() {
-        ALL_ITEMS = new Item[]{ROLLING_PIN, ROLLED_LEAVES, CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, OOLONG_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, BLACK_TEA_LEAVES, HOJICHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, BLACK_TEA_MILK, SENCHA_TEA, MATCHA_TEA, HOJICHA_TEA, OOLONG_TEA, BLACK_TEA};
+        ALL_ITEMS = new Item[]{ROLLING_PIN, ROLLED_LEAVES, LEAF_BUD, CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, SILVER_NEEDLE_TEA_LEAVES, OOLONG_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, BLACK_TEA_LEAVES, HOJICHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SILVER_NEEDLE_TEA, BLACK_TEA_MILK, SENCHA_TEA, MATCHA_TEA, HOJICHA_TEA, OOLONG_TEA, BLACK_TEA};
     }
 }

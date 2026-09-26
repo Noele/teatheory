@@ -5,6 +5,30 @@
   },
   "pools": [
     {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teatheory:camellia_sinensis_bush"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.01
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teatheory:leaf_bud"
+        }
+      ]
+    },
+    {
       "condition": {
         "type": "minecraft:match_block",
         "blocks": "teatheory:camellia_sinensis_bush",
