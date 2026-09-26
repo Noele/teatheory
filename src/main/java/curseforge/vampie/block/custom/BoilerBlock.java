@@ -40,7 +40,6 @@ public class BoilerBlock extends FurnaceBlock {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof BoilerBlockEntity) {
             player.openMenu((MenuProvider)blockEntity);
-            player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
 
     }
@@ -62,8 +61,8 @@ public class BoilerBlock extends FurnaceBlock {
             double dx = axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52 : ss;
             double dy = random.nextDouble() * (double)6.0F / (double)16.0F;
             double dz = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : ss;
-            level.addParticle(ParticleTypes.SMOKE, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
-            level.addParticle(ParticleTypes.FLAME, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
+            level.addParticle(ParticleTypes.BUBBLE, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
+            level.addParticle(ParticleTypes.BUBBLE_POP, x + dx, y + dy, z + dz, (double)0.0F, (double)0.0F, (double)0.0F);
         }
     }
 }
