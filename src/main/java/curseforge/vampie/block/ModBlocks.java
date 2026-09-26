@@ -1,6 +1,7 @@
 package curseforge.vampie.block;
 
 import curseforge.vampie.TeaTheory;
+import curseforge.vampie.block.custom.BoilerBlock;
 import curseforge.vampie.block.custom.CamelliaSinensisBushBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -35,6 +36,15 @@ public class ModBlocks
                     .noOcclusion()
             ));
 
+    public final Block BOILER_BLOCK = registerBlock("boiler",
+            new BoilerBlock(BlockBehaviour.Properties.of().setId(
+                    ResourceKey.create(
+                            BuiltInRegistries.BLOCK.key(),
+                            TeaTheory.id("boiler")
+                    )
+            )
+            ));
+
     private Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(TeaTheory.MOD_ID, name), block);
@@ -50,6 +60,6 @@ public class ModBlocks
 
     public final Item[] ALL_BLOCKS_AS_ITEMS;
     public ModBlocks() {
-        ALL_BLOCKS_AS_ITEMS = new Item[] {TEA_BRICK.asItem(), CAMELLIA_SINENSIS_BUSH.asItem()};
+        ALL_BLOCKS_AS_ITEMS = new Item[] {TEA_BRICK.asItem(), CAMELLIA_SINENSIS_BUSH.asItem(), BOILER_BLOCK.asItem()};
     }
 }
