@@ -21,6 +21,12 @@ public class ModItems {
                     TeaTheory.id("fukamushicha_sencha_tea")
             )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
 
+    public static final Item MATCHA_TEA = registerItem("matcha_tea", new Item(new Item.Properties().setId(
+            ResourceKey.create(
+                    BuiltInRegistries.ITEM.key(),
+                    TeaTheory.id("matcha_tea")
+            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+
     public static final Item SENCHA_TEA = registerItem("sencha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
@@ -55,6 +61,6 @@ public class ModItems {
     }
 
     public ModItems() {
-        ALL_ITEMS = new Item[]{CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SENCHA_TEA};
+        ALL_ITEMS = new Item[]{CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SENCHA_TEA, MATCHA_TEA};
     }
 }
