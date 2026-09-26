@@ -2,7 +2,7 @@
   "type": "teatheory:boiler",
   "show_notification": true,
   "category": "misc",
-  "ingredient": "teatheory:sencha_tea_leaves",
-  "result": "teatheory:fukamushicha_sencha_tea_leaves",
+  "ingredient": "teatheory:camellia_sinensis",
+  "result": "teatheory:sencha_tea_leaves",
   "cookingtime": 100
 }
