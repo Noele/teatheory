@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+      "teatheory:black_tea",
+      "minecraft:milk_bucket"
+  ],
+  "result": {
+    "id": "teatheory:black_tea_milk",
+    "count": 1
+  }
+}
