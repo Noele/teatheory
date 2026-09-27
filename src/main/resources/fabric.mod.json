@@ -3,13 +3,12 @@
 	"id": "teatheory",
 	"version": "${version}",
 	"name": "Tea Theory",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adding tea to Minecraft in a more realistic way",
 	"authors": [
-		"Me!"
+		"vampie"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/tea-theory/"
 	},
 	"license": "All Rights Reserved",
 	"icon": "assets/teatheory/icon.png",
