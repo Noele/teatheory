@@ -22,6 +22,7 @@ public class ModItemGroups {
     );
     public final CreativeModeTab CUSTOM_CREATIVE_TAB;
 
+    /** Registers the Tea Theory creative tab and populates it with the mod's items and blocks. */
     public ModItemGroups(ModItems modItems, ModBlocks modBlocks) {
         CUSTOM_CREATIVE_TAB = FabricCreativeModeTab.builder()
                 .icon(() -> new ItemStack(modItems.CAMELLIA_SINENSIS))

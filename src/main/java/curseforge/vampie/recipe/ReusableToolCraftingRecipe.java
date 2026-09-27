@@ -54,6 +54,14 @@ public class ReusableToolCraftingRecipe implements CraftingRecipe {
     private final List<Ingredient> ingredients;
     private PlacementInfo placementInfo;
 
+    /**
+     * Creates a shapeless crafting recipe with the supplied result and ingredients.
+     *
+     * @param commonInfo shared recipe metadata
+     * @param bookInfo crafting-book grouping and category metadata
+     * @param result output item stack template
+     * @param ingredients ingredients that must be present in the crafting grid
+     */
     public ReusableToolCraftingRecipe(
             final Recipe.CommonInfo commonInfo,
             final CraftingRecipe.CraftingBookInfo bookInfo,
@@ -66,16 +74,19 @@ public class ReusableToolCraftingRecipe implements CraftingRecipe {
         this.ingredients = ingredients;
     }
 
+    /** Returns the registered serializer for reusable-tool crafting recipes. */
     @Override
     public RecipeSerializer<ReusableToolCraftingRecipe> getSerializer() {
         return SERIALIZER;
     }
 
+    /** Treats this recipe as a standard crafting-table recipe. */
     @Override
     public RecipeType<CraftingRecipe> getType() {
         return RecipeType.CRAFTING;
     }
 
+    /** Lazily builds the ingredient placement metadata used by the crafting UI. */
     @Override
     public PlacementInfo placementInfo() {
         if (placementInfo == null) {
@@ -84,17 +95,20 @@ public class ReusableToolCraftingRecipe implements CraftingRecipe {
         return placementInfo;
     }
 
+    /** Checks that the crafting grid contains exactly the recipe's ingredients. */
     @Override
     public boolean matches(final CraftingInput input, final Level level) {
         return input.ingredientCount() == ingredients.size()
                 && input.stackedContents().canCraft(this, null);
     }
 
+    /** Creates the configured recipe result. */
     @Override
     public ItemStack assemble(final CraftingInput input) {
         return result.create();
     }
 
+    /** Returns the Rolling Pin to its crafting slot instead of consuming it. */
     @Override
     public NonNullList<ItemStack> getRemainingItems(final CraftingInput input) {
         NonNullList<ItemStack> remaining = CraftingRecipe.defaultCraftingReminder(input);
@@ -107,6 +121,7 @@ public class ReusableToolCraftingRecipe implements CraftingRecipe {
         return remaining;
     }
 
+    /** Builds the crafting-book display for this shapeless recipe. */
     @Override
     public List<RecipeDisplay> display() {
         return List.of(new ShapelessCraftingRecipeDisplay(
@@ -116,16 +131,19 @@ public class ReusableToolCraftingRecipe implements CraftingRecipe {
         ));
     }
 
+    /** Returns the crafting-book group for this recipe. */
     @Override
     public String group() {
         return bookInfo.group();
     }
 
+    /** Returns whether crafting this recipe should show a notification. */
     @Override
     public boolean showNotification() {
         return commonInfo.showNotification();
     }
 
+    /** Returns the crafting-book category configured for this recipe. */
     @Override
     public CraftingBookCategory category() {
         return bookInfo.category();

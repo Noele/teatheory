@@ -14,6 +14,11 @@ public final class ModBlockEntities {
     private ModBlockEntities() {
     }
 
+    /**
+     * Registers the boiler block entity type and associates it with its owning block.
+     *
+     * @param boilerBlock registered boiler block
+     */
     public static void register(final Block boilerBlock) {
         BOILER = Registry.register(
                 BuiltInRegistries.BLOCK_ENTITY_TYPE,

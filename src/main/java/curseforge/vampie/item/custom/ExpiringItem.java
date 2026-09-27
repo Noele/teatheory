@@ -16,6 +16,14 @@ public class ExpiringItem extends Item {
         super(properties);
     }
 
+    /**
+     * Configures this item to transform into another item after its inventory lifetime.
+     *
+     * @param replacement item to become when the lifetime ends
+     * @param lifetimeTicks lifetime in game ticks; must be positive
+     * @return this item for fluent configuration
+     * @throws IllegalArgumentException if the lifetime is not positive
+     */
     public ExpiringItem expiresTo(final Item replacement, final int lifetimeTicks) {
         if (lifetimeTicks <= 0) {
             throw new IllegalArgumentException("lifetimeTicks must be positive");
@@ -25,6 +33,10 @@ public class ExpiringItem extends Item {
         return this;
     }
 
+    /**
+     * Starts or advances the item's inventory timer and replaces the stack when it expires.
+     * Aging is limited to player inventories.
+     */
     @Override
     public void inventoryTick(
             final ItemStack stack,

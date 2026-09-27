@@ -16,11 +16,13 @@ public class BoilerBlockEntity extends AbstractFurnaceBlockEntity {
         super(ModBlockEntities.BOILER, worldPosition, blockState, ModRecipes.BOILER);
     }
 
+    /** Supplies the localized default title shown for the boiler menu. */
     @Override
     protected Component getDefaultName() {
         return DEFAULT_NAME;
     }
 
+    /** Uses the furnace menu to expose the boiler's input, fuel, and output slots. */
     @Override
     protected AbstractContainerMenu createMenu(final int containerId, final Inventory inventory) {
         return new FurnaceMenu(containerId, inventory, this, this.dataAccess);

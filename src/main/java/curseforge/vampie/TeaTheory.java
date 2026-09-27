@@ -23,6 +23,7 @@ public class TeaTheory implements ModInitializer {
 	private ModItemGroups modItemGroups;
 	private WorldGen worldGen;
 
+	/** Registers the mod's data components, content, recipes, block entities, and world generation. */
 	@Override
 	public void onInitialize() {
 		LOGGER.debug("Registering Mod Data Components for " + MOD_ID);
@@ -48,6 +49,12 @@ public class TeaTheory implements ModInitializer {
 
 	}
 
+	/**
+	 * Creates an identifier in the Tea Theory namespace.
+	 *
+	 * @param path the path portion of the identifier
+	 * @return an identifier with the {@code teatheory} namespace
+	 */
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}

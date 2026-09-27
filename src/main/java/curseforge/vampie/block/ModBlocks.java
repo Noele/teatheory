@@ -45,11 +45,13 @@ public class ModBlocks
             )
             ));
 
+    /** Registers a block and creates its corresponding inventory item. */
     private Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(TeaTheory.MOD_ID, name), block);
     }
 
+    /** Registers the item form associated with a block. */
     private static void registerBlockItem(String name, Block block) {
         Registry.register(
                 BuiltInRegistries.ITEM,
@@ -59,6 +61,7 @@ public class ModBlocks
     }
 
     public final Item[] ALL_BLOCKS_AS_ITEMS;
+    /** Registers the mod's blocks and collects their item forms for the creative tab. */
     public ModBlocks() {
         ALL_BLOCKS_AS_ITEMS = new Item[] {TEA_BRICK.asItem(), CAMELLIA_SINENSIS_BUSH.asItem(), BOILER_BLOCK.asItem()};
     }

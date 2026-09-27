@@ -17,6 +17,14 @@ public class ModFoodComponents {
             .saturationModifier(5)
             .build();
 
+    /**
+     * Creates a drinkable tea consumable that applies the supplied effect when consumed.
+     *
+     * @param effect status effect to apply
+     * @param durationTicks effect duration in game ticks
+     * @param amplifier effect amplifier, where zero is level I
+     * @return the configured tea consumable
+     */
     public static Consumable teaWithEffect(
             final Holder<MobEffect> effect,
             final int durationTicks,

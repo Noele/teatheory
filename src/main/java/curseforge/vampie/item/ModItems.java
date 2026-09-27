@@ -137,12 +137,14 @@ public class ModItems {
 
     public final Item[] ALL_ITEMS;
 
+    /** Registers an item under the Tea Theory namespace. */
     private static Item registerItem(String name, Item item) {
         return Registry.register(
                 BuiltInRegistries.ITEM,
                 Identifier.fromNamespaceAndPath(TeaTheory.MOD_ID, name), item);
     }
 
+    /** Collects registered items for display in the Tea Theory creative tab. */
     public ModItems() {
         ALL_ITEMS = new Item[]{ROLLING_PIN, ROLLED_LEAVES, LEAF_BUD, CAMELLIA_SINENSIS, SENCHA_TEA_LEAVES, SILVER_NEEDLE_TEA_LEAVES, OOLONG_TEA_LEAVES, FUKAMUSHICHA_SENCHA_TEA_LEAVES, BLACK_TEA_LEAVES, HOJICHA_TEA_LEAVES, MATCHA_POWDER, FUKAMUSHICHA_SENCHA_TEA, SILVER_NEEDLE_TEA, BLACK_TEA_MILK, SENCHA_TEA, MATCHA_TEA, HOJICHA_TEA, OOLONG_TEA, BLACK_TEA};
     }

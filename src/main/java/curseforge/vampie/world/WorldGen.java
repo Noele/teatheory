@@ -9,6 +9,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class WorldGen {
+    /** Adds Camellia Sinensis bush generation to forest biomes. */
     public WorldGen() {
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(BiomeTags.IS_FOREST),

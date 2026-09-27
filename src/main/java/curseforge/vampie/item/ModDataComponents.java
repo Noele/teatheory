@@ -12,6 +12,7 @@ public final class ModDataComponents {
     private ModDataComponents() {
     }
 
+    /** Registers the persistent, network-synchronized item expiration-time component. */
     public static void register() {
         EXPIRATION_TIME = Registry.register(
                 BuiltInRegistries.DATA_COMPONENT_TYPE,

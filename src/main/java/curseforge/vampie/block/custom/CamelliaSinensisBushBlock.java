@@ -23,6 +23,9 @@ public class CamelliaSinensisBushBlock extends SweetBerryBushBlock {
         super(properties);
     }
 
+    /**
+     * Harvests a mature bush, with a 1% chance to also drop a Leaf Bud, and resets its age.
+     */
     @Override
     protected @NonNull InteractionResult useWithoutItem(final BlockState state, final Level level, final BlockPos pos, final Player player, final BlockHitResult hitResult) {
         if ((Integer) state.getValue(AGE) > 1) {
@@ -43,6 +46,7 @@ public class CamelliaSinensisBushBlock extends SweetBerryBushBlock {
             return super.useWithoutItem(state, level, pos, player, hitResult);
         }
     }
+    /** Returns the Camellia Sinensis item when this bush is picked in the world. */
     @Override
     protected @NonNull ItemStack getCloneItemStack(final LevelReader level, final BlockPos pos, final BlockState state, final boolean includeData) {
         return new ItemStack(ModItems.CAMELLIA_SINENSIS);

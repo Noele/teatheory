@@ -11,6 +11,7 @@ public final class ModRecipes {
     private ModRecipes() {
     }
 
+    /** Registers the boiler recipe type and custom recipe serializers. */
     public static void register() {
         BOILER = Registry.register(
                 BuiltInRegistries.RECIPE_TYPE,

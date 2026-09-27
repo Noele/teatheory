@@ -24,6 +24,7 @@ public final class TeaTooltips {
     private TeaTooltips() {
     }
 
+    /** Registers Shift-sensitive description and effect tooltips for finished teas. */
     public static void register() {
         ItemTooltipCallback.EVENT.register((stack, context, flag, lines) -> {
             TooltipText text = TEA_TOOLTIPS.get(stack.getItem());

@@ -25,16 +25,19 @@ public class BoilerBlock extends FurnaceBlock {
         super(properties);
     }
 
+    /** Creates the custom block entity that stores and processes boiler contents. */
     @Override
     public BlockEntity newBlockEntity(final BlockPos worldPosition, final BlockState blockState) {
         return new BoilerBlockEntity(worldPosition, blockState);
     }
 
+    /** Supplies the vanilla furnace processing ticker for this boiler's recipe type. */
     @Override
     public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(final Level level, final BlockState blockState, final BlockEntityType<T> type) {
         return createFurnaceTicker(level, type, ModBlockEntities.BOILER);
     }
 
+    /** Opens the boiler inventory for players interacting with this block. */
     @Override
     protected void openContainer(final Level level, final BlockPos pos, final Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -44,6 +47,7 @@ public class BoilerBlock extends FurnaceBlock {
 
     }
 
+    /** Renders bubbles and occasional bubbling sounds while the boiler is lit. */
     @Override
     public void animateTick(final BlockState state, final Level level, final BlockPos pos, final RandomSource random) {
         if ((Boolean)state.getValue(LIT)) {

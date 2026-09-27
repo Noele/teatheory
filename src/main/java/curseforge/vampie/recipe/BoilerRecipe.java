@@ -21,6 +21,16 @@ public class BoilerRecipe extends AbstractCookingRecipe {
             AbstractCookingRecipe.cookingStreamCodec(BoilerRecipe::new);
     public static final RecipeSerializer<BoilerRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
 
+    /**
+     * Creates a cooking recipe processed by the Boiler.
+     *
+     * @param commonInfo shared recipe metadata
+     * @param bookInfo cooking recipe-book metadata
+     * @param ingredient input ingredient
+     * @param result output item stack template
+     * @param experience experience awarded when processing completes
+     * @param cookingTime processing duration in ticks
+     */
     public BoilerRecipe(
             final Recipe.CommonInfo commonInfo,
             final CookingBookInfo bookInfo,
@@ -32,21 +42,25 @@ public class BoilerRecipe extends AbstractCookingRecipe {
         super(commonInfo, bookInfo, ingredient, result, experience, cookingTime);
     }
 
+    /** Uses the furnace icon for the boiler recipe-book category. */
     @Override
     protected Item furnaceIcon() {
         return Items.FURNACE;
     }
 
+    /** Identifies recipes processed by the custom Boiler block. */
     @Override
     public RecipeType<BoilerRecipe> getType() {
         return ModRecipes.BOILER;
     }
 
+    /** Returns the serializer used to load and synchronize boiler recipes. */
     @Override
     public RecipeSerializer<BoilerRecipe> getSerializer() {
         return SERIALIZER;
     }
 
+    /** Places boiler recipes in the miscellaneous furnace recipe-book category. */
     @Override
     public RecipeBookCategory recipeBookCategory() {
         return RecipeBookCategories.FURNACE_MISC;
