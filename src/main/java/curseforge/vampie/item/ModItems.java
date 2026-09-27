@@ -7,6 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 
 public class ModItems {
@@ -51,50 +52,58 @@ public class ModItems {
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("fukamushicha_sencha_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.NIGHT_VISION, 1200, 0))));
 
     public static final Item MATCHA_TEA = registerItem("matcha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("matcha_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.HASTE, 1200, 0))));
 
     public static final Item SENCHA_TEA = registerItem("sencha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("sencha_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.SPEED, 1200, 0))));
 
     public static final Item BLACK_TEA = registerItem("black_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("black_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.STRENGTH, 600, 0))));
 
     public static final Item OOLONG_TEA = registerItem("oolong_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("oolong_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.RESISTANCE, 600, 0))));
 
     public static final Item BLACK_TEA_MILK = registerItem("black_tea_milk", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("black_tea_milk")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.REGENERATION, 200, 1))));
 
     public static final Item HOJICHA_TEA = registerItem("hojicha_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("hojicha_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.FIRE_RESISTANCE, 1200, 0))));
 
 
     public static final Item SILVER_NEEDLE_TEA = registerItem("silver_needle_tea", new Item(new Item.Properties().setId(
             ResourceKey.create(
                     BuiltInRegistries.ITEM.key(),
                     TeaTheory.id("silver_needle_tea")
-            )).food(ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_FOODPROPERTIES, ModFoodComponents.FUKAMUSHICHA_SENCHA_TEA_CONSUMABLE)));
+            )).food(ModFoodComponents.TEA_FOOD_PROPERTIES,
+                    ModFoodComponents.teaWithEffect(MobEffects.SLOW_FALLING, 1200, 0))));
 
 
     public static final Item FUKAMUSHICHA_SENCHA_TEA_LEAVES = registerItem("fukamushicha_sencha_tea_leaves", new Item(new Item.Properties().setId(

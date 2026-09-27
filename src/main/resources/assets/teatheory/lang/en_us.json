@@ -31,5 +31,22 @@
   "item.teatheory.boiler": "Boiler",
   "container.teatheory.boiler": "Boiler",
 
-  "item.teatheory.camellia_sinensis_bush": "Camellia Sinensis Bush"
+  "item.teatheory.camellia_sinensis_bush": "Camellia Sinensis Bush",
+  "tooltip.teatheory.hold_shift": "Hold Shift for tea details",
+  "tooltip.teatheory.sencha.description": "A bright, grassy brew said to quicken the step.",
+  "tooltip.teatheory.sencha.effect": "Effect: Speed I (1:00)",
+  "tooltip.teatheory.fukamushicha.description": "Deep-steamed leaves, favored by gardeners of the night.",
+  "tooltip.teatheory.fukamushicha.effect": "Effect: Night Vision (1:00)",
+  "tooltip.teatheory.matcha.description": "Whisked green powder for a focused burst of energy.",
+  "tooltip.teatheory.matcha.effect": "Effect: Haste I (1:00)",
+  "tooltip.teatheory.hojicha.description": "Roasted over heat; its warmth is said to linger.",
+  "tooltip.teatheory.hojicha.effect": "Effect: Fire Resistance (1:00)",
+  "tooltip.teatheory.oolong.description": "A balanced, partly oxidized tea with a steadying character.",
+  "tooltip.teatheory.oolong.effect": "Effect: Resistance I (0:30)",
+  "tooltip.teatheory.black.description": "A robust brew traditionally carried on long journeys.",
+  "tooltip.teatheory.black.effect": "Effect: Strength I (0:30)",
+  "tooltip.teatheory.black_milk.description": "A mellow, comforting cup for restoring a weary traveler.",
+  "tooltip.teatheory.black_milk.effect": "Effect: Regeneration II (0:10)",
+  "tooltip.teatheory.silver_needle.description": "A delicate bud tea, light as a drifting leaf.",
+  "tooltip.teatheory.silver_needle.effect": "Effect: Slow Falling (1:00)"
 }
