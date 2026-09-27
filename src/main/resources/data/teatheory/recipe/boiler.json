@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "_C_",
+    "_@_"
+  ],
+  "key": {
+    "_": [
+      "minecraft:cobblestone"
+    ],
+    "@": [
+      "minecraft:iron_ingot"
+    ],
+    "C": [
+      "teatheory:camellia_sinensis"
+    ]
+  },
+  "result": {
+    "id": "teatheory:boiler"
+  }
+}
